@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Unicorns | Romantic Experiences for Couples</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: #f8c1d9; /* 柔和粉色背景 */
+            color: #5a3d5c;
+            line-height: 1.6;
+            background-image: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            background: linear-gradient(45deg, #e84393, #6c5ce7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 30px;
+            color: #e84393;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #5a3d5c;
+            font-weight: 600;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: #e84393;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #e84393, #6c5ce7);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero section */
+        .hero {
+            height: 75vh; /* Hero 区域高度 */
+            padding: 100px 0 60px; /* 底部留出空间 */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;   /* 垂直对齐到底部 */
+            justify-content: center; /* 水平居中 */
+        }
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./couples-dating-unicorn.jpeg');
+            background-size: cover; /* 满屏铺满更适合 Hero */
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 1;
+        }
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #e84393, #6c5ce7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #e84393, #6c5ce7);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* App download section */
+        .app-download {
+            padding: 40px 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .app-download h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #5a3d5c;
+        }
+
+        .app-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .app-btn {
+            display: flex;
+            align-items: center;
+            background: #000; /* 黑色按钮 */
+            padding: 12px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff; /* 白色文字 */
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .app-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .app-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Features section */
+        .features {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 36px;
+            color: #5a3d5c;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #e84393;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #5a3d5c;
+        }
+
+        /* Couple stories section */
+        .stories {
+            padding: 80px 0;
+        }
+
+        .story-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .story-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-image {
+            height: 200px;
+            background: linear-gradient(45deg, #e84393, #6c5ce7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .story-content {
+            padding: 20px;
+        }
+
+        .story-content h3 {
+            margin-bottom: 10px;
+            color: #5a3d5c;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(45deg, #5a3d5c, #3d2a4d);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #e84393;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .app-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .app-btn {
+                width: 200px;
+            }
+    .hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;   /* 文字和按钮居中 */
+        }
+    .hero .container {
+            position: relative;
+            z-index: 2; /* 确保文字在图片之上 */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Couples Dating Unicorns</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#login">Login</a></li>
+                        
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>The Community for Couples and Unicorn</h2>
+            <p>Couples dating unicorns is about open-minded connection, mutual respect, and shared adventure. It’s a dynamic where a confident, kind third partner joins an established couple to explore chemistry, intimacy, and meaningful moments built on honesty, clarity, and genuine communication.</p>
+            <a href="#features" class="btn">Join Now</a>
+        </div>
+    </section>
+
+    <!-- App download section -->
+    <section class="app-download">
+        <div class="container">
+            <h3>Download Our App</h3>
+            <div class="app-buttons">
+                <a href="#" class="app-btn">
+                    <span class="app-icon"></span>
+                    <span>Download on the App Store</span>
+                </a>
+                <a href="#" class="app-btn">
+                    <span class="app-icon">▶︎</span>
+                    <span>GIT IT ON Google Play</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Our Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💖</div>
+                    <h3>First Date Ideas</h3>
+                    <p>Discover curated first-date experiences designed to break the ice naturally, spark chemistry, and create genuine real-world connections from the very first meeting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Verified Members</h3>
+                    <p>Every profile goes through a multi-step verification process to ensure authenticity, reduce fake accounts, and create a trusted environment for real connections.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>10+ Privacy Controls</h3>
+                    <p>Advanced privacy tools give you full control over visibility, messaging, and personal data so you can explore confidently, safely, and on your own terms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>© Copyright © 2025 CouplesDateUnicorns.com | All rights reserved.</p>
+    </footer>
+</body>
+</html>
